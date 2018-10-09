@@ -6,11 +6,12 @@ public class PlayerMovement : MonoBehaviour
     public float lookSpeed = 1;
     public float maxLookSpeed = 5;
     public float fixAmount = 0.5f;
-    public float speed = 3f;
 
     private Vector2 direction;
     private float rotateAmount = 0;
     private float actualSpeed = 0;
+    private float speed = 3f;
+    private float health;
 
     Vector2 oldPosition;
     Vector2 positionLastFrame;
@@ -18,6 +19,12 @@ public class PlayerMovement : MonoBehaviour
     bool inCollision = false;
 
     private int hits;
+
+    private void Start()
+    {
+        speed = Constants.S.speed;
+        health = Constants.S.initialPlayerHealth;
+    }
 
     void Update()
     {
@@ -126,6 +133,15 @@ public class PlayerMovement : MonoBehaviour
             || collision.CompareTag("RightWall") || collision.CompareTag("LeftWall") || collision.CompareTag("AI"))
         {
             inCollision = true;
+            Debug.Log(health);
+            if (collision.CompareTag("AI"))
+            {
+                health -= 5;
+                if(health <= 0)
+                {
+                    Destroy(gameObject);
+                }
+            }
         }
         hits++;
     }

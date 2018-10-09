@@ -628,6 +628,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1887172815}
+  - component: {fileID: 1887172816}
   - component: {fileID: 1887172814}
   m_Layer: 0
   m_Name: SceneManager
@@ -665,6 +666,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1887172816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1887172813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f553b642b42f94f9a847c6816a6f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialPlayerHealth: 20
+  speed: 5
 --- !u!224 &2026333626 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224877767243187908, guid: 5c7bc03df2c585d469cb288cdb383e85,
