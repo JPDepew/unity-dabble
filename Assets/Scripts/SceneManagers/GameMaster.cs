@@ -28,10 +28,6 @@ public class GameMaster : MonoBehaviour
         }
         timer.text = "Time: " + Time.timeSinceLevelLoad.ToString("F2");
 
-        countTimer += Time.deltaTime;
-        if (countTimer > 1)
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
-        }
+
     }
 }
