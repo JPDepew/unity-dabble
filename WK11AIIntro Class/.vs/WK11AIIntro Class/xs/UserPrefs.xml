@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{08D12EAE-7244-7E43-ED99-673B58DDBB23}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SceneManager.cs">
+    <Files>
+      <File FileName="Assets/EnemyAI.cs" Line="40" Column="26" />
+      <File FileName="Assets/Scripts/SceneManager.cs" Line="11" Column="47" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
