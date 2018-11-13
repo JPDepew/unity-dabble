@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{5C5B5CB7-CECF-F258-F008-8CFE0EF3C6E5}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMoveScript.cs">
+    <Files>
+      <File FileName="Assets/Scripts/AIMotion.cs" Line="35" Column="31" />
+      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="87" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/william.birmingham/Desktop/CS365 F18 Code/Lecture Code/WK3C1Lecture Prep/Assets/Scripts/PlayerMoveScript.cs" relfile="Assets/Scripts/PlayerMoveScript.cs" line="73" column="1" />
+      <Breakpoint file="/Users/william.birmingham/Desktop/CS365 F18 Code/Lecture Code/WK3C1Lecture Prep/Assets/Scripts/PlayerMoveScript.cs" relfile="Assets/Scripts/PlayerMoveScript.cs" line="75" column="1" />
+      <Breakpoint file="/Users/william.birmingham/Desktop/CS365 F18 Code/Lecture Code/WK3C1Lecture Prep/Assets/Scripts/PlayerMoveScript.cs" relfile="Assets/Scripts/PlayerMoveScript.cs" line="66" column="1" />
+      <Breakpoint file="/Users/william.birmingham/Desktop/CS365 F18 Code/Lecture Code/WK3C1Lecture Prep/Assets/Scripts/PlayerMoveScript.cs" relfile="Assets/Scripts/PlayerMoveScript.cs" line="91" column="1" />
+      <Breakpoint file="/Users/william.birmingham/Desktop/CS365 F18 Code/Lecture Code/WK3C1Lecture Prep/Assets/Scripts/PlayerMoveScript.cs" relfile="Assets/Scripts/PlayerMoveScript.cs" line="96" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

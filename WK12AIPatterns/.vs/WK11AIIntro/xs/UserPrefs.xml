@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{0BBF6960-CDFD-4C4C-849A-3E2F4554A46C}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EnemyAI.cs">
+    <Files>
+      <File FileName="Assets/EnemyAI.cs" Line="64" Column="25" />
+      <File FileName="Assets/Scripts/SceneManager.cs" Line="33" Column="31" />
+      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="35" Column="8" />
+      <File FileName="Assets/Scripts/BulletMoveScript.cs" Line="31" Column="1" />
+      <File FileName="Assets/Scripts/AIMotion.cs" Line="78" Column="1" />
+      <File FileName="Assets/Scripts/PlayerShootScript.cs" Line="24" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
