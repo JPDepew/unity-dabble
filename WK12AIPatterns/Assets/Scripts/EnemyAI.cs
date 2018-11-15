@@ -18,12 +18,14 @@ public class EnemyAI : MonoBehaviour
 
     public GameObject weapon;
 
+    private bool getNewWaypoint = true;
     private GameObject player;
     private Light spotLight;
 
     private PatternsAI patternsAI;
     private WaypointsAI waypointsAI;
     private Vector2 waypointDirection;
+    Vector3 dir = Vector2.zero;
 
     public enum AIMode
     {
@@ -46,7 +48,7 @@ public class EnemyAI : MonoBehaviour
 
         patternsAI = GetComponent<PatternsAI>();
         waypointsAI = GetComponent<WaypointsAI>();
-        StartCoroutine("EmitWeapon");
+        //StartCoroutine("EmitWeapon");
     }
 
     void lookAtPlayer(float dist, Vector2 lookAt)
@@ -108,7 +110,6 @@ public class EnemyAI : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log("here");
             yield return new WaitForSeconds(0.2f);
             Instantiate(weapon, transform.position, transform.rotation);
         }
@@ -116,9 +117,12 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        Vector3 dir = Vector3.zero;
+        //Vector3 dir = Vector3.zero;
         float distance = 0;
-        dir = this.transform.position - player.transform.position;
+        if (aiMode != AIMode.waypointMove)
+        {
+            dir = transform.position - player.transform.position;
+        }
         //dir.y = 0;
         distance = dir.magnitude;
         if (facePlayer)
@@ -144,7 +148,8 @@ public class EnemyAI : MonoBehaviour
                 }
                 break;
             case AIMode.runAway:
-                if (distance <= runAwayDistance) {
+                if (distance <= runAwayDistance)
+                {
                     multiplier = 12 / distance;
                     Debug.Log(multiplier);
                     localSpeed = -enemySpeed;
@@ -173,6 +178,7 @@ public class EnemyAI : MonoBehaviour
                 localSpeed = enemySpeed;
                 break;
             case AIMode.waypointMove:
+
                 waypointDirection = waypointsAI.evaluateWaypoint();
 
                 #region
@@ -186,7 +192,7 @@ public class EnemyAI : MonoBehaviour
                     multiplier = 20f / distance;
                     localSpeed = -enemySpeed;
                 }
-                else if(distance < 2.9f)
+                else if (distance < 2.9f)
                 {
                     multiplier = 20f / distance;
                     localSpeed = enemySpeed;
@@ -203,12 +209,27 @@ public class EnemyAI : MonoBehaviour
 
         if (aiMode == AIMode.waypointMove)
         {
-            dir = waypointDirection;
+            if (getNewWaypoint)
+            {
+                dir = waypointDirection;
+                Debug.Log(dir);
+                getNewWaypoint = false;
+                StartCoroutine(waitALittle());
+                Vector2 randomness = new Vector2(Random.Range(-0.4f, 0.4f), Random.Range(-0.4f, 0.4f));
+                dir += (Vector3)randomness;
+                dir.Normalize();
+            }
         }
         #endregion
         transform.position = Vector2.Lerp(transform.position, transform.position + multiplier * dir * localSpeed * Time.deltaTime, 0.2f);
     }
+    IEnumerator waitALittle()
+    {
+        yield return new WaitForSeconds(1f);
+        getNewWaypoint = true;
+    }
 }
+
 
 //using System.Collections;
 //using System.Collections.Generic;
