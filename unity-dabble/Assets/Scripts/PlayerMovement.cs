@@ -28,6 +28,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.up, 10);
+        Debug.DrawRay(transform.position, transform.up * 10);
+
+        if (hits.Length > 0)
+        {
+            foreach (RaycastHit2D h in hits)
+            {
+                Debug.Log(h.collider.name);
+            }
+        }
+        
         GetInput();
         newCalculatedPosition = UpdatePosition();
         transform.Rotate(0, 0, rotateAmount);
